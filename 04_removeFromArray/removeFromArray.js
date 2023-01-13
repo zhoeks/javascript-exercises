@@ -4,7 +4,7 @@ const removeFromArray = function() {
     let args = [...arguments].splice(1);
     let returnArray = array.filter( (element) => !args.includes(element) );
 
-    console.log(returnArray);
+    return returnArray;
 };
 
 // Do not edit below this line
