@@ -1,15 +1,11 @@
-const sumAll = function(num1, num2) {
+const sumAll = function(...arguments) {
+    let sortedArray = [Math.min(...arguments), Math.max(...arguments)];
     let returnValue = 0;
-    if (num1 > num2) {
-        for (let i = num1; i <= num2; i++) {
-            returnValue += i;
-        }
-    } else if (num1 < num2) {
-        for (let i = num2; i <= num1; i++) {
-            returnValue += i;
-        }
+    for (let i = sortedArray[0]; i <= sortedArray[1]; i++) {
+        returnValue += i;
     }
-    console.log(returnValue)
+    
+    return returnValue;
 };
 
 // Do not edit below this line
