@@ -1,6 +1,6 @@
 const sumAll = function() {
     let numberCheck = [...arguments].every(function (test) {
-        return test >= 0
+        return test >= 0 && typeof test == 'number';
     })
     let sortedArray = [Math.min(...arguments), Math.max(...arguments)];
     let returnValue = 0;
